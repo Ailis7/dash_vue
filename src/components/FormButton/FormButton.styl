@@ -1,0 +1,50 @@
+.FormButton
+  position: relative
+
+  box-sizing: border-box
+
+  display: block
+  width: 100%
+  padding: var(--form-button-space) var(--form-button-gap)
+
+  border: none
+  border-radius: var(--form-field-border-radius)
+
+  opacity: 1
+
+  transition-duration: 0.8s
+  transition-property: opacity
+
+  &_Disabled
+    opacity: .3
+
+  &_Slim
+    padding: var(--form-button-slim-space) var(--form-button-slim-gap)
+
+  &_Theme
+    &_blue
+      font-weight: var(--form-button-weight)
+      color: var(--form-button-color-white)
+
+      background: linear-gradient(180deg, #00aeff 0%, #0076ff 100%)
+
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15)
+
+
+    &_pseudo
+      color: var(--form-button-color-pseudo)
+      background: transparent
+
+  &_Icon
+    &_arrow-white
+      &:after
+        position: absolute
+        content: ''
+        top: 0
+        right: 0
+        bottom: 0
+
+        width: 56px
+
+        background: url('./assets/arrow-white.svg') 50% 50% no-repeat
+

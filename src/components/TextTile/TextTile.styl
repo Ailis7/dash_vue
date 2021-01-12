@@ -1,0 +1,31 @@
+.TextTile
+
+  &_Centered
+    text-align: center
+
+  &_Size_m
+    font-size: var(--font-size-m)
+
+  &_Size_l
+    font-size: var(--font-size-l)
+    font-weight: var(--font-weight-xxl)
+    line-height: var(--line-height-l)
+
+    .TextTile-SmallText
+      display: block
+
+      font-size: var(--font-size-s)
+      font-weight: var(--font-weight-m)
+      line-height: var(--line-height-s)
+
+  &_Size_xxxl
+    font-size: var(--font-size-xxxl)
+    font-weight: var(--font-weight-xxl)
+    line-height: var(--line-height-xxxl)
+
+  &_Theme
+    &_white
+      color: var(--color-white)
+
+      .TextTile-SmallText
+        opacity: .7

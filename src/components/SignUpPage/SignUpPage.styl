@@ -1,0 +1,41 @@
+.SignUpPage
+  box-sizing: border-box
+  min-height: 100vh
+  padding: var(--page-padding) var(--page-padding) 0
+
+  background: var(--page-background)
+
+  &-Divider
+    margin-top: var(--page-divider-top-space)
+    margin-bottom: var(--page-divider-bottom-space)
+
+  &-Form
+    margin: var(--page-form-space) 0 0
+    padding: 0
+
+  &-FormField
+    &:not(:first-child)
+      margin-top: var(--page-form-fields-space)
+
+  &-Header
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &-Logo
+    height: 67px
+    width: 180px
+
+    background: url('./-Logo/logo.svg')
+    background-size: cover
+
+  &-Social
+    margin-top: var(--page-social-space)
+
+  &-SubmitButton
+    margin-top: var(--page-form-submit-space)
+
+  &-Title
+    margin: var(--page-title-space) 0 0
+
+    text-align: center

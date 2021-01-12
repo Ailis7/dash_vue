@@ -1,0 +1,116 @@
+.FormField
+  position: relative
+
+  box-sizing: border-box
+
+  display: flex
+  align-items: center
+
+  width: 100%
+
+  border: var(--form-field-border-width) solid transparent
+  border-radius: var(--form-field-border-radius)
+
+  background: linear-gradient(180deg, rgba(165, 170, 183, 0.1) 0%, rgba(132, 137, 147, 0.1) 100%)
+
+  &_Active,
+  &_Main
+    border: var(--form-field-border-width) solid var(--form-field-border-color)
+
+    background: transparent
+
+  &_Centered
+    .FormField
+      &-Input
+        text-align: center
+
+        &:placeholder-shown
+          text-align: left
+
+  &_Main
+    .FormField
+      &-Input
+        font-weight: var(--form-field-main-font-weight)
+
+  &_Slim
+    box-sizing: border-box
+    height: var(--form-field-slim-height)
+
+    border-width: var(--form-field-slim-border-width)
+
+    .FormField
+      &-Input
+        padding: var(--form-field-slim-padding)
+
+        line-height: var(--su-typo-line-super-l)
+
+  &_Valid
+    &_InProgress
+      background: url('../../assets/icon-loading-circular-blue.gif') calc(100% - var(--form-field-slim-padding)) 50% no-repeat
+      background-size: var(--form-field-icon-size)
+
+    &_Yes
+      background: url('../../assets/ok.svg') calc(100% - var(--form-field-slim-padding)) 50% no-repeat
+
+  &_WithValidation
+    .FormField
+      &-Input
+        padding-right: calc(var(--form-field-icon-size) + 2 * var(--form-field-slim-padding))
+
+  &-AfterLink
+    padding-right: var(--form-field-before-gap)
+
+    white-space: nowrap
+
+  &-BeforeText
+    position: relative
+    z-index: 1
+
+    padding: var(--form-field-slim-padding) calc(var(--form-field-slim-padding) + var(--form-field-slim-border-width)) calc(var(--form-field-slim-padding) + var(--form-field-slim-border-width)) var(--form-field-before-gap)
+
+    color: #fff
+    font-weight: var(--form-field-before-font-weight)
+    white-space: nowrap
+
+    &:after
+      position: absolute
+      left: var(--form-field-before-bg-unmargin)
+      top: var(--form-field-before-bg-unmargin)
+      bottom: var(--form-field-before-bg-unmargin)
+      right: 0
+      z-index: -1
+
+      content: ''
+
+      background: linear-gradient(180deg, #00aeff 0%, #0076ff 100%)
+      border-radius: var(--form-field-border-radius) 0 0 var(--form-field-border-radius);
+
+  &-InputWrapper
+    width: 100%
+
+  &-Input
+    box-sizing: border-box
+    width: 100%
+    padding: var(--form-field-space) var(--form-field-gap)
+
+    font-weight: var(--form-field-font-weight)
+    caret-color: var(--form-field-caret-color)
+
+    border: none
+    border-radius: var(--form-field-border-radius)
+    outline: none
+
+    background: transparent
+
+    &::placeholder
+      color: var(--form-field-placeholder-color)
+
+    &:disabled
+      color: var(--color-black)
+
+  &-ValidationSuccessMessage
+    position: absolute
+    right: 0
+    bottom: calc(-1 * (var(--su-typo-line-l) + var(--form-field-validation-text-space)))
+
+    color: #038A0D

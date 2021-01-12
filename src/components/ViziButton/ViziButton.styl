@@ -1,0 +1,51 @@
+.ViziButton
+  border: none
+  border-radius: var(--button-border-radius)
+
+  &-Before
+    position: relative
+
+    display: inline-block
+
+    height: 100%
+    width: var(--icon-size-m)
+
+    margin-right: var(--gap-l)
+
+  &-Icon
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+
+    margin: auto
+
+  &-Text
+    display: inline-block
+
+    vertical-align: top
+
+    font-size: var(--button-font-size)
+    font-weight: var(--button-font-weight)
+    line-height: var(--button-height)
+
+  &_Size
+    &_m
+      height: var(--button-height)
+
+      .ViziButton-Content,
+      .ViziButton-Text
+        height: var(--button-height)
+
+        line-height: var(--button-height)
+
+  &_Social
+    &_telegram
+      color: var(--color-white)
+
+      background: linear-gradient(180deg, var(--color-blue-100) 0%, var(--color-blue-300) 100%);
+
+    &_whatsapp
+      color: var(--color-white)
+
+      background: linear-gradient(180deg, var(--color-green-100) 0%, var(--color-green-300) 100%);
